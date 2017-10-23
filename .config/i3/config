@@ -188,9 +188,9 @@ bindcode control+mod1+46 exec lock
 bindcode control+mod1+39 exec lock && systemctl suspend
 
 # Volume control
-bindsym XF86AudioRaiseVolume exec $HOME/scripts/volume_control.py up 5
-bindsym XF86AudioLowerVolume exec $HOME/scripts/volume_control.py down 5
-bindsym XF86AudioMute exec $HOME/scripts/volume_control.py toggle
+bindsym XF86AudioRaiseVolume exec $HOME/.config/scripts/volume_control.py up 5
+bindsym XF86AudioLowerVolume exec $HOME/.config/scripts/volume_control.py down 5
+bindsym XF86AudioMute exec $HOME/.config/scripts/volume_control.py toggle
 
 # Media keys
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -225,7 +225,7 @@ for_window [class="Thunar|Pamac-manager|Easytag"] floating enable, resize shrink
 
 # Auto start
 exec --no-startup-id compton -b
-exec_always /home/kevin/scripts/i3_multi_display.sh
+exec_always /home/kevin/.config/scripts/i3_multi_display.sh
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id dunst -config /home/kevin/.config/dunst/dunstrc
 exec nm-applet

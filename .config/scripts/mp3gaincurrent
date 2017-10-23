@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for f in *.{mp3,MP3}
+do
+  mp3gain -r -d 6.0 "$f"
+done

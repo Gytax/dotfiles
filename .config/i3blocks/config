@@ -6,7 +6,7 @@ border_right=0
 border_bottom=4
 
 [volume]
-command=[[ -z "${BLOCK_BUTTON}" ]] || ( [[ "${BLOCK_BUTTON}" == "1" ]] && ((/usr/bin/pavucontrol -t 3 --name "pavucontrol-bar" || true) && $HOME/scripts/volume_control.py signal) || $HOME/scripts/volume_control.py toggle ); $HOME/scripts/volume_control.py i3blocks
+command=[[ -z "${BLOCK_BUTTON}" ]] || ( [[ "${BLOCK_BUTTON}" == "1" ]] && ((/usr/bin/pavucontrol -t 3 --name "pavucontrol-bar" || true) && $HOME/.config/scripts/volume_control.py signal) || $HOME/.config/scripts/volume_control.py toggle ); $HOME/.config/scripts/volume_control.py i3blocks
 interval=5
 signal=1
 markup=pango
@@ -24,7 +24,7 @@ command=nm-applet
 border=#98971
 
 [battery]
-command=$HOME/scripts/battery.sh
+command=$HOME/.config/scripts/battery.sh
 interval=persist
 border=#3f51b5
 

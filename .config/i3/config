@@ -219,9 +219,9 @@ assign [class="Lollypop"] 10
 assign [class="Slack"] 1
 
 # Configs
-for_window [class="Lightscreen"] floating enable, border normal
-for_window [class="Thunar|Pamac-manager|Easytag"] floating enable, resize shrink width 10000px, resize grow width 1000px, resize shrink height 10000px, resize grow height 800px, border normal
-
+for_window [class="Lightscreen|Peek"] floating enable, border normal
+for_window [class="Thunar|Pamac-manager|Easytag"] floating enable, resize shrink width 10000px, resize grow width 1000px, resize shrink height 10000px, resize grow height 600px, border normal
+for_window [window_type="dialog"] floating enable, resize shrink width 10000px, resize grow width 500px, resize shrink height 10000px, resize grow height 200px, border normal
 
 # Auto start
 exec --no-startup-id compton -b
@@ -231,4 +231,5 @@ exec_always --no-startup-id dunst -config /home/kevin/.config/dunst/dunstrc
 exec nm-applet
 exec udiskie
 exec terminator
+exec tilda
 exec slack
